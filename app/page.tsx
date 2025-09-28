@@ -60,9 +60,9 @@ export default function Home() {
               Learn with Sonic
             </h1>
             <p className="text-2xl text-gray-300 max-w-2xl leading-10 font-urbanist">
-              Unlock creativity and mastery with Sonic's courses—each designed
-              to equip developers with the knowledge and skills to create,
-              explore, and innovate.
+              Unlock creativity and mastery with Sonic&apos;s courses—each
+              designed to equip developers with the knowledge and skills to
+              create, explore, and innovate.
             </p>
           </div>
 

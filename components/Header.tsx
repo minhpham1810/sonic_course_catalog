@@ -1,3 +1,6 @@
+import { Iansui } from "next/font/google";
+import Image from "next/image";
+
 export default function Header() {
   return (
     <header className="bg-black border-b border-gray-800">
@@ -7,7 +10,9 @@ export default function Header() {
           <div className="flex items-center">
             <div className="w-32 h-8 rounded-md flex items-center justify-center">
               <a href="https://www.soniclabs.com/">
-                <img
+                <Image
+                  width={96}
+                  height={24}
                   src="/sonic-logo.svg"
                   alt="Sonic Logo"
                   className="w-24 h-6"
