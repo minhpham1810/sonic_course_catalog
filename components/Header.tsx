@@ -6,11 +6,13 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="w-32 h-8 rounded-md flex items-center justify-center">
-              <img
-                src="/sonic-logo.svg"
-                alt="Sonic Logo"
-                className="w-24 h-6"
-              />
+              <a href="https://www.soniclabs.com/">
+                <img
+                  src="/sonic-logo.svg"
+                  alt="Sonic Logo"
+                  className="w-24 h-6"
+                />
+              </a>
             </div>
           </div>
 
@@ -70,7 +72,7 @@ export default function Header() {
                 Airdrop
               </button>
               <button className="bg-black/85 border border-gray-700 p-2 rounded-full text-orange-400 hover:text-orange-300 transition-colors">
-                <span className="text-lg">☀️</span>
+                <span className="text-lg">🔔</span>
               </button>
             </div>
           </div>
