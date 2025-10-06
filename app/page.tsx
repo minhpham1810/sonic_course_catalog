@@ -53,13 +53,13 @@ export default function Home() {
       <div className="relative z-10">
         <Header />
 
-        <main className="max-w-7xl mx-auto px-16 py-24">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-16 sm:py-20 md:py-24">
           {/* Hero Section */}
-          <div className="mb-16">
-            <h1 className="text-8xl font-medium text-gray-100 mb-8 font-urbanist">
+          <div className="mb-12 md:mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium text-gray-100 mb-6 sm:mb-8 font-urbanist leading-tight">
               Learn with Sonic
             </h1>
-            <p className="text-2xl text-gray-300 max-w-2xl leading-10 font-urbanist">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl leading-relaxed sm:leading-9 font-urbanist">
               Unlock creativity and mastery with Sonic&apos;s courses—each
               designed to equip developers with the knowledge and skills to
               create, explore, and innovate.
@@ -67,7 +67,7 @@ export default function Home() {
           </div>
 
           {/* Search Bar Section */}
-          <div className="mb-16">
+          <div className="mb-12 md:mb-16">
             <SearchBar
               placeholder="Search courses by title, level, or topic..."
               onSearch={handleSearch}
@@ -76,8 +76,8 @@ export default function Home() {
 
           {/* Results Summary */}
           {searchQuery && (
-            <div className="mb-8">
-              <p className="text-lg text-gray-300 font-urbanist">
+            <div className="mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-gray-300 font-urbanist">
                 {filteredCourses.length === 0
                   ? `No courses found for "${searchQuery}"`
                   : `Found ${filteredCourses.length} course${
@@ -88,7 +88,7 @@ export default function Home() {
           )}
 
           {/* Course Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
             {filteredCourses.length === 0 && searchQuery ? (
               <div className="col-span-full text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>

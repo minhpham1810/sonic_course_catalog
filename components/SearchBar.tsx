@@ -34,7 +34,12 @@ export default function SearchBar({
   };
 
   return (
-    <div className={cn("w-full max-w-2xl mx-auto", className)}>
+    <div
+      className={cn(
+        "w-full max-w-full sm:max-w-2xl mx-auto px-2 sm:px-0",
+        className
+      )}
+    >
       <form onSubmit={handleSubmit} className="relative group">
         <div
           className={cn(
@@ -45,10 +50,10 @@ export default function SearchBar({
           )}
         >
           {/* Search Icon */}
-          <div className="absolute left-6 flex items-center pointer-events-none">
+          <div className="absolute left-4 sm:left-6 flex items-center pointer-events-none">
             <svg
               className={cn(
-                "w-6 h-6 transition-colors duration-300",
+                "w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300",
                 isFocused ? "text-[#FFC966]" : "text-gray-400"
               )}
               fill="none"
@@ -73,7 +78,7 @@ export default function SearchBar({
             onBlur={() => setIsFocused(false)}
             placeholder={placeholder}
             className={cn(
-              "w-full bg-transparent border-none outline-none px-16 py-4 text-lg text-gray-100 placeholder-gray-400",
+              "w-full bg-transparent border-none outline-none pl-12 sm:pl-16 pr-12 sm:pr-16 py-3 sm:py-4 text-base sm:text-lg text-gray-100 placeholder-gray-400",
               "font-urbanist transition-all duration-300",
               "focus:placeholder-gray-500"
             )}
@@ -84,10 +89,10 @@ export default function SearchBar({
             <button
               type="button"
               onClick={handleClear}
-              className="absolute right-6 p-1 rounded-full transition-all duration-300 hover:bg-white/10 group"
+              className="absolute right-4 sm:right-6 p-1 rounded-full transition-all duration-300 hover:bg-white/10 group"
             >
               <svg
-                className="w-5 h-5 text-gray-400 hover:text-gray-200 transition-colors duration-300"
+                className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 hover:text-gray-200 transition-colors duration-300"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

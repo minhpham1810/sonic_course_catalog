@@ -40,9 +40,9 @@ export default function CourseCard({
     <div className="group relative w-full max-w-[363px] transition-all duration-500 hover:scale-[1.03] hover:shadow-2xl">
       <Card
         className={cn(
-          "relative bg-[#131315] border border-[#506077] rounded-[24px] p-[25px] transition-all duration-500 hover:border-gray-500 hover:shadow-lg overflow-hidden",
+          "relative bg-[#131315] border border-[#506077] rounded-[24px] p-5 sm:p-6 md:p-[25px] transition-all duration-500 hover:border-gray-500 hover:shadow-lg overflow-hidden",
           // Override shadcn defaults to match current design
-          "shadow-sm border-[#506077] bg-[#131315] text-card-foreground gap-0 py-[25px] px-[25px]"
+          "shadow-sm border-[#506077] bg-[#131315] text-card-foreground gap-0 py-5 sm:py-6 md:py-[25px] px-5 sm:px-6 md:px-[25px]"
         )}
       >
         {/* Subtle border overlay */}
@@ -51,28 +51,24 @@ export default function CourseCard({
         {/* Background glow on hover */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-orange-500/5 rounded-[24px] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        <CardContent className="relative w-[313px] h-[229px] p-0">
+        <CardContent className="relative w-full sm:w-[313px] min-h-[220px] sm:h-[229px] p-0">
           {/* Content Container - Fixed height matching Figma */}
           {/* Level Badge - Positioned exactly as in Figma */}
           <Badge
             className={cn(
-              `absolute right-0 top-[214px] ${levelStyle.bgColor} rounded-[10px] px-3 py-1 h-[20px] w-[114px] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg`,
+              `absolute right-0 top-[186px] sm:top-[214px] ${levelStyle.bgColor} rounded-[10px] px-3 py-1 h-[20px] w-[110px] sm:w-[114px] flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg`,
               // Override shadcn defaults to match current design
-              "border-transparent text-base font-bold leading-none font-urbanist",
+              "border-transparent text-sm sm:text-base font-bold leading-none font-urbanist",
               levelStyle.textColor
             )}
           >
             {levelStyle.label}
           </Badge>
 
-          {/* Sonic Logo - 81fd9bb30626ba399ef3271aa789d04a8f1a7458-128x128.svg fill */}
-          <div className="absolute left-[-7px] top-0 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
-            {/* Auto layout container - 112x112px */}
-            <div className="flex flex-col justify-center items-center p-0 w-[112px] h-[112px] flex-none order-0 flex-grow-0 overflow-visible">
+          <div className="absolute left-[-4px] sm:left-[-7px] top-0 transition-all duration-500 group-hover:rotate-12 group-hover:scale-110">
+            <div className="flex flex-col justify-center items-center p-0 w-[100px] sm:w-[112px] h-[100px] sm:h-[112px] flex-none order-0 flex-grow-0 overflow-visible">
               {/* Component 2 - Main container */}
-              <div className="w-[112px] h-[112px] flex-none order-0 flex-grow-0 relative">
-                {/* Vector elements with exact Figma positioning and transforms */}
-
+              <div className="w-[100px] sm:w-[112px] h-[100px] sm:h-[112px] flex-none order-0 flex-grow-0 relative">
                 {/* Vector 1 - Hidden background with transform matrix(0.7, 0.71, -0.7, 0.71) */}
                 <div
                   className="absolute opacity-0"
@@ -269,29 +265,29 @@ export default function CourseCard({
             </div>
           </div>
 
-          {/* Text Content */}
+          {/* Text Content - Exact positioning and spacing from Figma */}
           <div className="absolute left-0 top-[132px] w-full">
             <div className="flex flex-col gap-2">
               {/* Title */}
-              <h3 className="text-[#f5f5f5] font-semibold text-[23px] leading-[25px] transition-all duration-300 group-hover:text-orange-200 font-urbanist line-clamp-2">
+              <h3 className="text-[#f5f5f5] font-semibold text-[20px] sm:text-[23px] leading-tight sm:leading-[25px] transition-all duration-300 group-hover:text-orange-200 font-urbanist line-clamp-2">
                 {title}
               </h3>
 
               {/* Description */}
-              <p className="text-[#f5f5f5] font-small text-base leading-6 transition-colors duration-300 group-hover:text-gray-200 font-urbanist line-clamp-2">
+              <p className="text-[#f5f5f5] font-small text-sm sm:text-base leading-6 transition-colors duration-300 group-hover:text-gray-200 font-urbanist line-clamp-2">
                 {description}
               </p>
             </div>
           </div>
 
           {/* Action Link - Positioned exactly as in Figma */}
-          <div className="absolute left-0 top-[206px] transition-transform duration-300 group-hover:translate-x-2">
+          <div className="absolute left-0 top-[182px] sm:top-[206px] transition-transform duration-300 group-hover:translate-x-2">
             <Button
               asChild
               className={cn(
-                "inline-flex items-center gap-1 backdrop-blur-sm backdrop-filter rounded-full pl-0 pr-6 py-2 transition-all duration-300 hover:bg-white/10",
+                "inline-flex items-center gap-1 backdrop-blur-sm backdrop-filter rounded-full pl-0 pr-5 sm:pr-6 py-2 transition-all duration-300 hover:bg-white/10",
                 // Override shadcn defaults to match current design
-                "h-auto p-0 pl-0 pr-6 py-2 bg-transparent border-0 shadow-none hover:bg-white/10 text-[#ffc966] hover:text-orange-300"
+                "h-auto p-0 pl-0 pr-5 sm:pr-6 py-2 bg-transparent border-0 shadow-none hover:bg-white/10 text-[#ffc966] hover:text-orange-300"
               )}
             >
               <a
@@ -300,12 +296,12 @@ export default function CourseCard({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1"
               >
-                <span className="font-bold text-base transition-colors duration-300 group-hover:text-orange-300 font-urbanist leading-6 flex items-center justify-center w-full">
+                <span className="font-bold text-sm sm:text-base transition-colors duration-300 group-hover:text-orange-300 font-urbanist leading-6 flex items-center justify-center w-full">
                   Start Learning
                 </span>
 
                 {/* External link icon */}
-                <div className="w-6 h-6 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
+                <div className="w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300 group-hover:translate-x-1 group-hover:scale-110">
                   <svg
                     width="24"
                     height="24"
