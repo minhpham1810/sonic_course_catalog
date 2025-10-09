@@ -2,7 +2,7 @@
 
 A modern, interactive course catalog built with Next.js 15, featuring beautiful UI components, fluid animations, and a responsive design. Explore courses with an immersive experience powered by LiquidEther background animations and Sonic-themed design elements.
 
-Link to the project's Figma design: https://www.figma.com/design/NoBiC0kywkn75e1GdH0yMY/Untitled?node-id=1-487&t=LZJwonDPrJQEODwt-0
+Link to the project's Figma design: [https://www.figma.com/design/NoBiC0kywkn75e1GdH0yMY/Untitled?node-id=1-487&t=LZJwonDPrJQEODwt-0](https://www.figma.com/site/KMxqdVU7fhCBCHC5QC4tiT/Untitled?node-id=0-1&t=paISk0WtnlucwL3r-1)
 
 Link to the project's Vercel deployment: https://sonic-course-catalog-six.vercel.app/
 
