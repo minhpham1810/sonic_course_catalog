@@ -41,7 +41,6 @@ const DotGrid = ({
   resistance = 750,
   returnDuration = 1.5,
   className = "",
-  style,
 }) => {
   const wrapperRef = useRef(null);
   const canvasRef = useRef(null);
@@ -386,7 +385,7 @@ const DotGrid = ({
   ]);
 
   return (
-    <section className={`dot-grid ${className}`} style={style}>
+    <section className={`dot-grid ${className}`}>
       <div ref={wrapperRef} className="dot-grid__wrap">
         <canvas ref={canvasRef} className="dot-grid__canvas" />
       </div>
