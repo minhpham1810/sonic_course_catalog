@@ -6,7 +6,7 @@ import CourseCard from "@/components/CourseCard";
 import SearchBar from "@/components/SearchBar";
 import LiquidEther from "@/components/LiquidEther";
 import courses from "@/data/courses";
-
+import DotGrid from "@/components/DotGrid";
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -33,7 +33,7 @@ export default function Home() {
     <div className="min-h-screen bg-black relative">
       {/* LiquidEther Background - Fixed full-screen background */}
       <div className="fixed inset-0 z-0">
-        <LiquidEther
+        {/* <LiquidEther
           mouseForce={25}
           cursorSize={150}
           resolution={0.35}
@@ -46,7 +46,8 @@ export default function Home() {
           BFECC={true}
           dt={0.014}
           isBounce={false}
-        />
+        /> */}
+        <DotGrid />
       </div>
 
       {/* Content Layer - Above background */}

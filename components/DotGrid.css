@@ -1,0 +1,41 @@
+.dot-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: 
+  
+    /* radial-gradient(
+      circle at top right,
+      rgba(246, 144, 56, 0.3) 0%,
+      rgba(246, 144, 56, 0) 45%
+    ), */
+    radial-gradient(
+      circle at bottom left,
+      rgba(246, 144, 56, 0.3) 0%,
+      rgba(246, 144, 56, 0) 45%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(246, 144, 56, 0.4) 0%,
+      rgba(246, 144, 56, 0) 50%
+    ),
+    #030104;
+  background-color: #030104;
+}
+
+.dot-grid__wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.dot-grid__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
